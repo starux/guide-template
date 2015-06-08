@@ -1,0 +1,98 @@
+// File: Typography
+// Description: 
+// Version: 0.1.0
+// ------------------------------------------------------------
+
+// These are proposed fixes for the Header and Typography variables
+h1{
+  border-bottom: $baseUnderline;
+}
+
+/*doc
+---
+title: Typography
+name: typography
+category: Styles
+---
+
+**These are the heading paragraph usecases**
+
+
+<h1>h1 36px</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus turpis et ipsum convallis lobortis eget eu tellus. Donec bibendum nibh eget justo congue, ac ornare dolor commodo. Mauris in est nec urna pulvinar tempor. Pellentesque in aliquet velit. Nullam ac massa nisl. Integer placerat nec leo at gravida. Donec dictum magna imperdiet, dignissim odio ac, convallis est. Duis lobortis semper arcu, id laoreet nisi. Aliquam mollis cursus dignissim. Duis id diam eu odio pharetra consequat. Ut sit amet diam quis tortor tempus tempus.</p>
+
+<h2>h2 25px</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus turpis et ipsum convallis lobortis eget eu tellus. Donec bibendum nibh eget justo congue, ac ornare dolor commodo. Mauris in est nec urna pulvinar tempor. Pellentesque in aliquet velit. Nullam ac massa nisl. Integer placerat nec leo at gravida. Donec dictum magna imperdiet, dignissim odio ac, convallis est. Duis lobortis semper arcu, id laoreet nisi. Aliquam mollis cursus dignissim. Duis id diam eu odio pharetra consequat. Ut sit amet diam quis tortor tempus tempus.</p>
+
+<h3>h3 20px</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus turpis et ipsum convallis lobortis eget eu tellus. Donec bibendum nibh eget justo congue, ac ornare dolor commodo. Mauris in est nec urna pulvinar tempor. Pellentesque in aliquet velit. Nullam ac massa nisl. Integer placerat nec leo at gravida. Donec dictum magna imperdiet, dignissim odio ac, convallis est. Duis lobortis semper arcu, id laoreet nisi. Aliquam mollis cursus dignissim. Duis id diam eu odio pharetra consequat. Ut sit amet diam quis tortor tempus tempus.</p>
+
+<h4>h4 18px</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus turpis et ipsum convallis lobortis eget eu tellus. Donec bibendum nibh eget justo congue, ac ornare dolor commodo. Mauris in est nec urna pulvinar tempor. Pellentesque in aliquet velit. Nullam ac massa nisl. Integer placerat nec leo at gravida. Donec dictum magna imperdiet, dignissim odio ac, convallis est. Duis lobortis semper arcu, id laoreet nisi. Aliquam mollis cursus dignissim. Duis id diam eu odio pharetra consequat. Ut sit amet diam quis tortor tempus tempus.</p>
+
+<h5>h5 16px</h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus turpis et ipsum convallis lobortis eget eu tellus. Donec bibendum nibh eget justo congue, ac ornare dolor commodo. Mauris in est nec urna pulvinar tempor. Pellentesque in aliquet velit. Nullam ac massa nisl. Integer placerat nec leo at gravida. Donec dictum magna imperdiet, dignissim odio ac, convallis est. Duis lobortis semper arcu, id laoreet nisi. Aliquam mollis cursus dignissim. Duis id diam eu odio pharetra consequat. Ut sit amet diam quis tortor tempus tempus.</p>
+
+
+**Paragraph padding**
+<div class="row ld-rowPadding-tall">
+  <div class="col-md-6"><h1>h1 36px</h1>
+	<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus turpis et ipsum convallis lobortis eget eu tellus. Donec bibendum nibh eget justo congue, ac ornare dolor commodo. Mauris in est nec urna pulvinar tempor. Pellentesque in aliquet velit. Nullam ac massa nisl. Integer placerat nec leo at gravida. Donec dictum magna imperdiet, dignissim odio ac, convallis est. Duis lobortis semper arcu, id laoreet nisi. Aliquam mollis cursus dignissim. Duis id diam eu odio pharetra consequat. Ut sit amet diam quis tortor tempus tempus.</p>
+		</div>
+	  <div class="col-md-6"><h1>h1 36px</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus turpis et ipsum convallis lobortis eget eu tellus. Donec bibendum nibh eget justo congue, ac ornare dolor commodo. Mauris in est nec urna pulvinar tempor. Pellentesque in aliquet velit. Nullam ac massa nisl. Integer placerat nec leo at gravida. Donec dictum magna imperdiet, dignissim odio ac, convallis est. Duis lobortis semper arcu, id laoreet nisi. Aliquam mollis cursus dignissim. Duis id diam eu odio pharetra consequat. Ut sit amet diam quis tortor tempus tempus.</p>
+		</div>
+</div>
+
+Heading                                                           | Helper Classes                  | usecases
+----------------------------------------------------------------- | ------------------------------- | -----------------
+<h1 class="ld-noUnderline">This is heading is an experement</h1>						              | `<h1 class="ld-noUnderline">`         					| h1 = 36px
+
+`<p>Paragraph</p>`
+
+<strong>Default Blockquote</strong>
+
+```html_example
+
+<blockquote class="">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+
+Alternate displays
+
+<blockquote class="blockquote-reverse">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+
+
+Add .blockquote-reverse for a blockquote with right-aligned content.
+
+```
+An h1 header
+============
+
+Paragraphs are separated by a blank line.
+
+2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
+look like:
+
+  * this one
+  * that one
+  * the other one
+
+Note that --- not considering the asterisk --- the actual text
+content starts at 4-columns in.
+
+> Block quotes are
+> written like so.
+>
+> They can span multiple paragraphs,
+> if you like.
+
+Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
+in chapters 12--14"). Three dots ... will be converted to an ellipsis.
+Unicode is supported. ☺
+
+*/

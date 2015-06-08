@@ -1,0 +1,186 @@
+// File: Buttons
+// Description: 
+// Version: 0.1.0
+// ------------------------------------------------------------
+
+
+/*doc
+---
+title: Buttons
+name: buttons
+parent: ctas
+---
+
+Buttons are our primary Call to Action and should be used sparingly. Buttons can float within 
+(overlay) images, stand alone on their own in a page or be used inside GUI elements such as panels.
+
+* **Buttons should use the `<button>` element when it is inside a `<form>` or a `nav` or `navbar`**
+* Use an `<a>` with `role="button"` for any links that should look like a button.
+* Buttons always have a hover state
+* Avoid using multiple buttons on a page. Multiple buttons and buttons that repeat in a pattern 
+on a page only serves to de-emphasizes the impact a button is intended to have
+* Do not use a button when a text link will suffice.
+
+
+When using buttons in page GUI, such as pagination buttons on a grid page, the look and feel of 
+the buttons may not adhere to the default look. This is because GUI related items some times 
+require customizations to fit the interface they are a part of.
+
+<span class="question">The color of the `<a>` button should not adopt the text link color. It should 
+instead adopt the styling of the button element.</span>
+
+
+
+```html_example
+<button class="btn btn-default">Strong Call to Action Text Here</button>
+<a class="btn btn-default" href="#" role="button">Link Button</a>
+```
+
+If you are just linking to another page please do not use a button, please use the
+`<a>` element instead. If your button performs an action, such as submitting
+a form or triggering some javascript event, then use a `<button>` element.
+
+*/
+
+/*doc
+---
+title: Button Sizes
+name: button-sizes
+parent: buttons
+---
+
+When choosing a button size always refer to the content around it when deciding its size. 
+**Buttons that are gouped next to each other should not be different sizes** but they can be different 
+colors. The larger the button the more visual emphasis it receives - therefore only large buttons should be used 
+for calling attention to something.
+
+There are 4 sizes for buttons: Large, medium (default), small, and extra small. Simply apply the size modifier class for the desired size.
+There is also an additional modifier that will make the button take the
+full width of the container. It may be used with any of the button
+sizes and style modifiers.
+
+Button Size                                                                                                  | Modifier Classes              | Use Cases
+------------------------------------------------------------------------------------------------------------ | ----------------------------- | -----------------
+<button class="btn btn-default btn-lg" type="button">Large</button>                                          | `btn btn-default btn-lg`      | Only 1 button on the page should ever be this large. This is reserved for key CTAs in a funnel such as the "Sign up" button on a lead gen page, an "Add to Cart" on a product page, and a "Place Your Order" button on the final page of checkout.
+<button class="btn btn-default" type="button">Default</button>                                               | `btn btn-default`             | The default size of a button. Use this size in marketing banners (on site and in email) or when there is no reason to use a larger or smaller one.
+<button class="btn btn-default btn-sm" type="button">Small</button>                                          | `btn btn-default btn-sm`      | Small buttons are to be used when there are a series of buttons to choose in a GUI, such as pagination.
+<button class="btn btn-default btn-xs" type="button">X-Small</button>                                        | `btn btn-default btn-xs`      | X-Small buttons are hardly ever used, unless a button or series of buttons are needed within a small GUI element, such as a side nav panel.
+<div style="width:150px"><button class="btn btn-default btn-block" type="button">Block</button></div>        | `btn btn-default btn-block`   | This is used for all primary CTAs on the XS breakpoint. It can also be used within small GUI elements that don't exceed 4 columns on other breakpoints.
+
+*/
+
+.ld-btn-defaultCta {
+	color: $color-brand-1-4;
+  	background-color: $color-brand-1-1;
+  	border: 1px solid $color-brand-1-3;
+}
+
+.ld-btn-defaultCta:hover,
+.ld-btn-defaultCta:focus,
+.ld-btn-defaultCta:active {
+  	color: $color-brand-1-4;
+  	background-color: $color-brand-1-2;
+  	border: 1px solid $color-brand-1-4;
+}
+
+.ld-btn-defaultCtaDark {
+	color: $color-default-1-4;
+  	background-color: $color-default-1-1;
+  	border: 1px solid $color-default-1-3;
+}
+
+.ld-btn-defaultCtaDark:hover,
+.ld-btn-defaultCtaDark:focus,
+.ld-btn-defaultCtaDark:active {
+	color: $color-default-1-4;
+  	background-color: $color-default-1-2;
+  	border: 1px solid $color-default-1-4;
+}
+
+.ld-btn-primaryCta {
+	color: $color-brand-1-1;
+  	background-color: $color-brand-1-4;
+  	border: 1px solid $color-brand-1-5;
+}
+
+.ld-btn-primaryCta:hover,
+.ld-btn-primaryCta:focus,
+.ld-btn-primaryCta:active {
+	color: $color-brand-1-1;
+  	background-color: $color-brand-1-5;
+  	border: 1px solid $color-brand-1-5;
+}
+
+.ld-btn-compCta {
+	color: $color-default-1-6;
+  	background-color: $color-special-1-1;
+  	border: 1px solid $color-special-1-3;
+}
+
+.ld-btn-compCta:hover,
+.ld-btn-compCta:focus,
+.ld-btn-compCta:active {
+	color: $color-default-1-6;
+  	background-color: $color-special-1-2;
+  	border: 1px solid $color-special-1-4;
+}
+
+.ld-btn-saveCta {
+	color: $color-default-1-1;
+  	background-color: $color-special-2-4;
+  	border: 1px solid $color-special-2-5;
+}
+
+.ld-btn-saveCta:hover,
+.ld-btn-saveCta:focus,
+.ld-btn-saveCta:active {
+	color: $color-default-1-1;
+  	background-color: $color-special-2-5;
+  	border: 1px solid $color-special-2-5;
+}
+
+.ld-btn-cta {
+	color: $color-default-1-1;
+  	background-color: $color-special-3-4;
+  	border: 1px solid $color-special-3-5;
+}
+
+.ld-btn-cta:hover,
+.ld-btn-cta:focus,
+.ld-btn-cta:active {
+	color: $color-default-1-1;
+  	background-color: $color-special-3-5;
+  	border: 1px solid $color-special-3-5;
+}
+
+
+/*doc
+---
+title: Button Styles
+name: button-styles
+parent: buttons
+---
+
+Whether you are using a `<button>` or an `<a>` the styles should be the same based on the class name used.
+
+#### General Styles
+
+Button Style                                               | Custom Class                | Use
+---------------------------------------------------------- | --------------------------- | -----------------
+<button class="btn ld-btn-defaultCta">Defualt</button>     | `btn ld-btn-defaultCta`     | All non-essential buttons within a light brand colored section of a page should use this style. This is considered a secondary CTA on light colored backgrounds and a primary CTA on dark colored backgrounds.
+<button class="btn ld-btn-defaultCtaDark">Default</button> | `btn ld-btn-defaultCtaDark` | All non-essential buttons within a light colored section of a page that uses the default colors should use this style. This is considered a secondary CTA on light colored backgrounds and a primary CTA on dark colored backgrounds.
+<button class="btn ld-btn-primaryCta">Primary</button>     | `btn ld-btn-primaryCta`     | All important and primary buttons on a light colored background should adopt this look. This is considered a primary CTA on light colored backgrounds and a secondary CTA on dark colored backgrounds.
+<button class="btn ld-btn-compCta">Complimentary</button>  | `btn ld-btn-compCta`        | An optional button color. If used, there can only be 1 button per page because it is a high contrast color. This works well in main feature banners or the one CTA on a lead gen landing page.
+
+
+#### Reserved Buttons
+
+These buttons are reserved for special use-cases as specified here:
+
+Reserved Buttons                                           | Custom Class             | Use
+---------------------------------------------------------- | ------------------------ | -----------------
+<button class="btn ld-btn-saveCta">Defualt</button>        | `btn ld-btn-saveCta`     | Use this for clearance CTAs - only 1 per landing page. Examples: "Get $100 Off" or "Save an Extra 5% Today"
+<button class="btn ld-btn-cta">Default</button>            | `btn ld-btn-cta`         | Use this for purchase and checkout CTAs only. Examples: "Add to Cart", "Checkout", "Continue" buttons in checkout, and the final "Submit Your Order" buttons.
+
+
+*/

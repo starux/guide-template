@@ -1,0 +1,76 @@
+// File: Lists
+// Description: 
+// Version: 0.1.0
+// ------------------------------------------------------------
+
+
+li{
+  padding-bottom:1rem;
+}
+
+.nav-tabs>li{
+ padding-bottom:0; 
+}
+
+/*doc
+---
+title: Lists
+name: lists
+parent: typography
+---
+
+
+Now a nested list:
+
+ 1. First, get these ingredients:
+
+      * carrots
+      * celery
+      * lentils
+
+ 2. Boil some water.
+
+ 3. Dump everything in the pot and follow
+    this algorithm:
+
+        find wooden spoon
+        uncover pot
+        stir
+        cover pot
+        balance wooden spoon precariously on pot handle
+        wait 10 minutes
+        goto first step (or shut off burner when done)
+
+    Do not bump wooden spoon or it will fall.
+
+Notice again how text always lines up on 4-space indents (including
+that last line which continues item 3 above).
+
+
+Here's a numbered list:
+
+ 1. first item
+ 2. second item
+ 3. third item
+
+Itemized lists
+look like:
+
+  * this one
+  * that one
+  * the other one
+
+Here's a definition list:
+
+apples
+  : Good for making applesauce.
+oranges
+  : Citrus!
+tomatoes
+  : There's no "e" in tomatoe.
+
+Again, text is indented 4 spaces. (Put a blank line between each
+term/definition pair to spread things out more.)
+
+
+*/

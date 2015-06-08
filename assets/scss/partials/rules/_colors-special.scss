@@ -1,0 +1,105 @@
+// File: Special Colors for Compact Appliance
+// Description: These colors are used sparingly and for special use cases.
+// Site: Compact Appliance
+
+// ------------------------------------------------------------
+// START SASS INCLUDES
+
+
+// @include "variables/colors";
+
+
+// END SASS INCLUDES
+// ------------------------------------------------------------
+
+
+/*doc
+---
+title: Special Colors
+name: special-colors
+parent: colors
+---
+
+The following colors are used sparingly on any given page. They contrast and compliment the brand and default colors of the website and are used to draw the user's attention, usually as a CTA but also as a piece of information, such as a price that's on sale.
+
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+	<div class="row">
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 s-card bg-color-special-1-2 bdr-color-special-1-3"></div>
+		<p class="center-block col-xs-9 col-sm-9 col-md-9 col-lg-9">
+			<strong>Primary Emphasis</strong><br>
+			Use this for primary CTAs. Please only use 1 per page.
+			<span class="center-block">
+				<code>$bg-color-special-1-2</code> <code>$dark-canary</code> <code>#ffca60</code>
+			</span>	
+		</p>
+	</div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+	<div class="row">
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 s-card bg-color-special-3-4 bdr-color-special-3-5"></div>
+		<p class="center-block col-xs-9 col-sm-9 col-md-9 col-lg-9">
+			<strong>Checkout & Add to Cart</strong><br>
+			This is a reserved color for Cart & Checkout CTAs only.
+			<span class="center-block">
+				<code>$bg-color-special-3-4</code> <code>$dark-leaf</code> <code>#0f9a33</code>
+			</span>	
+		</p>
+	</div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+	<div class="row">
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 s-card bg-color-special-2-4 bdr-color-special-2-5"></div>
+		<p class="center-block col-xs-9 col-sm-9 col-md-9 col-lg-9">
+			<strong>Sale & Clearance</strong><br>
+			Use this color for discount messaging. Beware of having too many...
+			<span class="center-block">
+				<code>$bg-color-special-2-4</code> <code>$dark-coral</code> <code>#ce3b14</code>
+			</span>	
+		</p>
+	</div>
+</div>
+
+*/
+
+
+.alert-danger {
+	background-color: lighten($color-special-2-1, 15%);
+	border-color: lighten($color-special-2-2, 15%);
+	color: darken($color-special-2-3, 20%);
+}
+
+.alert-warning {
+	background-color: lighten($color-special-1-1, 12%);
+	border-color: lighten($color-special-1-2, 12%);
+	color: darken($color-special-1-3, 20%);
+}
+
+.alert-success {
+	background-color: lighten($color-special-3-1, 25%);
+	border-color: lighten($color-special-3-2, 25%);
+	color: darken($color-special-3-3, 20%);
+}
+
+.alert-info {
+	background-color: $color-brand-1-2;
+	border-color: $color-brand-1-3;
+	color: $color-default-1-5;
+}
+
+/*doc
+---
+title: Alert Colors
+name: alert-colors
+parent: special-colors
+---
+
+These colors are reserved for alert messages and user feedback. They are lighter variations of the 
+brand and special colors so they compliment the theme.
+
+<div class="alert alert-info" role="alert">You might find this handy so <a class="alert-link">click here</a> to read more...</div>
+<div class="alert alert-success" role="alert">Great! Now let's move on to the next thing <a class="alert-link">click here</a>...</div>
+<div class="alert alert-warning" role="alert">Just a heads-up. Take another look <a class="alert-link">here</a> to read more...</div>
+<div class="alert alert-danger" role="alert">Sorry, but would you mind correcting these red items. We'll try to make this easier next time. Need some help? <a class="alert-link">Click here</a> to read more...</div>
+
+*/
+

@@ -1,0 +1,232 @@
+// File: Forms for Compact Appliance
+// Description: These colors make up 90% of the colors used on the site. See "brand Colors" for spot colors.
+// Site: Compact Appliance
+
+// ------------------------------------------------------------
+// START SASS INCLUDES
+
+
+// @include "variables/colors";
+
+
+// END SASS INCLUDES
+// ------------------------------------------------------------
+
+
+/*doc
+---
+title: Forms
+name: forms
+category: Styles
+---
+
+The quality of the user experience, especially when online interaction is required, influences the visitor's perception of our brand.
+
+All forms on the site need to be responsive and adhere to the following standards.
+
+## Rules
+* All form elements within a form need to have a **tabindex** set so the desktop user can tab to the next form field without using the mouse
+* All form fields must have great client-side visual **validation** in realtime with the user entering information. A global error should be listed next to the CTA that was clicked and the each offending field should have its own inline error message to the right of the field. See the validation section for more details.
+* **Help text** is only used to clarify what information is needed
+* **Placeholder text** is used to provide an example only.
+* **Labels** are required for all form elements
+* Only require the absolute minimum number of fields and clearly indicate required fields from non-required fields (highlighting all required fields is a good way to do this)
+* Always link the label with the input using the `for` and `id` attributes
+* Do not end a label with a colon (:)
+* Do not use ALL CAPS on anything - we aren't shouting at people
+* Use Capital Case for label text and sentence case for everything else
+* Do not use "Submit" text for the CTA of a button. Use a short descriptive 2-5 words to describe the action or result of submitting the form
+* Do not use fieldsets instead of form labels
+
+
+
+
+## Layout
+
+* Individual form controls automatically receive some global styling.
+ Control width using Bootstrap columns.
+* Avoid using tables for form layout.
+* Set all textual `<input>`, `<textarea>`, and `<select>` elements to class `form-control` so the width is 100% of the available width.
+* Use proper spacing by wrapping labels and controls in class `form-group` for optimum spacing.
+* Place labels for text input, textarea and select fields above and before the respective input for screen reader support. WCAG: G162
+* Form elements should not be listed horizontally but should only be stacked vertically unless there are 2 or 3 related fields. Valide exceptions are First and Last name, or username and password, or City, State, Zip. Users are accustomed to seeing these fields inline, and placing them vertically often causes confusion.
+* Place check boxes and radio buttons inline, preceding the label text. WCAG: G162
+Help text and instructions should be listed immediately following the label - to clarify what information is needed.
+
+
+*/
+
+
+
+// Need to write a required class
+.form-group.required label:after { content:" *"; color:red; }
+
+// Need a leading element to separate help-inline text from form label
+.help-inline:before { content:" - "; color: gray; }
+
+// Make help text gray
+.help-inline, .help-block { color: gray; }
+
+
+/*doc
+---
+title: Labels, Placeholder Text, and Help Text
+name: labels
+parent: forms
+---
+
+### Form Labels
+
+* Every visible form element needs a form label. Screen readers will have trouble with your forms if you don't include a label for every input.
+* Label text is always Capital Case - every word is capitalized
+* Form labels need to indicate a required status with a red asterisk "*" following the label name
+* For text inputs, textareas, and selects, the Labels are always above and aligned with the left edge of the form field(s)
+* For checkboxes and radio buttons the label is inline following the form element.
+* Label names should first be clear and to the point - do not use these for marketing messsages
+
+
+```html_example
+    
+<form>
+    <div class="form-group required">
+        <label for="textInput">Text Input Label</label>
+        <input type="text" id="textInput" class="form-control" tabindex="0">
+    </div>
+    
+    <div class="form-group">
+     <label for="textarea">Textarea Input Label</label>
+        <textarea id="textarea" class="form-control" rows="3" tabindex="1"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="select">Select Input Label</label>
+        <select id="select" class="form-control" tabindex="2">
+            <option>1</option>
+            <option>2</option>
+        </select>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" tabindex="3"> Checkbox Label
+        </label>
+    </div>
+
+    <div class="radio">
+        <label>
+            <input type="radio" tabindex="4"> Radio Label
+        </label>
+    </div>
+</form>
+
+```
+
+
+
+### Help text:
+
+Help text should be explicitly associated with the form control it relates to using the aria-describedby attribute. This will ensure that assistive technologies – such as screen readers – will announce this help text when the user focuses or enters the control.
+
+* **Inline** - Only use the inline style to denote that a field is optional.
+* **Block** - Use the block style to give context or directions for a particular field. You can also include denote something as optional.
+* **Placeholder** - Use placeholder text to give an actual example of what you might write (do not include additional text, such as "ex:" or "e.g.").
+
+```html_example
+    
+<form>
+    <div class="form-group">
+        <label>Label Name</label>
+        <span class="help-inline" id="MatchIDValue1">Optional Help Text (Optional)</span>
+        <input type="text" class="form-control" placeholder="placeholder copy here" aria-describedby="MatchIDValue1">
+    </div>
+
+    <div class="form-group">
+        <label for="inputHelpBlock">Label Name</label>
+        <span id="MatchIDValue2" class="help-block">A block of help text that breaks onto a new line beneath and may extend beyond one line.</span>
+        <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="MatchIDValue2">
+    </div>
+</form>
+
+```
+
+
+
+### Placeholder text:
+
+Provide an example of what the customer should fill in within text inputs and textareas.
+
+* Always include placeholder text.
+
+```html_example
+    
+<form>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" placeholder="john@doe.com">
+    </div>
+
+    <div class="form-group">
+        <label for="inputHelpBlock">Phone Number</label>
+        <input type="text" id="inputHelpBlock" class="form-control" placeholder="123-456-7890">
+    </div>
+
+    <div class="form-group">
+        <label for="inputHelpBlock">Description</label>
+        <textarea id="inputHelpBlock" class="form-control" placeholder="Provide your feedback here..." rows="3"></textarea>
+    </div>
+</form>
+
+```
+
+*/
+
+
+
+
+
+
+/*doc
+---
+title: Focus, Disabled, Readonly States
+name: form-states
+parent: forms
+---
+
+### Focus State
+
+When the user tabs, taps, or clicks into (focus) a text input, textarea, or select the form element will glow slightly.
+
+<form _lpchecked="1">
+    <input class="form-control" id="focusedInput" type="text" value="Demonstrative focus state">
+</form>
+
+### Disabled State
+
+Disabling form elements should only be done when the user must do something prior to changing the disabled element. In that case once the prior action was taken the disabled element should be enabled.
+
+When the field is disabled the user cannot use the field in any way, not to highlight the text for copying, not to select the element or tab into.
+
+Add the `disabled` boolean attribute on an input to prevent user interactions. Disabled inputs appear lighter and add a `not-allowed` cursor.
+
+```html_example
+
+<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+
+```
+
+
+### Readonly State
+
+Changing a form element to readonly should be done when carrying over previously supplied information or when information is supplied by the server (as in retrieved from the users account because they are logged in)
+
+This only works on inputs and textareas.
+
+Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
+
+```html_example
+
+<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+
+```
+
+*/

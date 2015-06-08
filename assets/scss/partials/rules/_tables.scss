@@ -1,0 +1,40 @@
+// File: Tables
+// Description: 
+// Version: 0.1.0
+// ------------------------------------------------------------
+
+table{
+	margin-bottom: 1rem;
+}
+
+
+/*doc
+---
+title: Tables & Rules
+name: tables
+category: Styles
+---
+
+
+A horizontal rule follows.
+
+***
+
+
+Tables can look like this:
+
+Button                                                            | Modifier Classes                | Use
+----------------------------------------------------------------- | ------------------------------- | -----------------
+<button class="btn btnDefault btnLrg">Large</button>              | `btn btnDefault btnLrg`         | Only 1 button on the page should be large
+<button class="btn btnDefault">Default</button>                   | `btn btnDefault`                | All buttons can be this size.
+<button class="btn btnDefault btnSml">Small</button>              | `btn btnDefault btnSml`         | When a secondary or tertiary section of content requires a button a smaller button may be preferred
+<button class="btn btnDefault btnFullWidth">Full width</button>   | `btn btnDefault btnFullWidth`   | This is used on Mobile Phones a lot but can be applied inside a small column to fill the width of the column.
+
+
+Table: Shoes, their sizes, and what they're made of
+
+(The above is the caption for the table.) Pandoc also supports
+multi-line tables:
+
+
+*/
